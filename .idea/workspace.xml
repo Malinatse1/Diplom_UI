@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde48782-8ca9-4abb-b323-a027f6922415" name="Changes" comment="Add new code">
+    <list default="true" id="bde48782-8ca9-4abb-b323-a027f6922415" name="Changes" comment="Fix tests">
+      <change afterPath="$PROJECT_DIR$/notifications/draft.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notifications/telegram.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/RegistrationPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/components/CalendarComponent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/components/RegistrationResultsModal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/Screenshot_188.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -271,7 +278,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674549997184</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Fix tests">
+      <created>1674551965206</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1674551965206</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -287,6 +301,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add new code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add new code" />
+    <MESSAGE value="Fix tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix tests" />
   </component>
 </project>

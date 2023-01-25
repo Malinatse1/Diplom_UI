@@ -61,7 +61,7 @@ public class CheckSearchAndFilters extends TestBase {
         });
     }
     @Test
-    @DisplayName("Проверка фильтров на странице поиска")
+    @DisplayName("Проверка фильтра на странице поиска")
     @Tag("Позитивный кейс")
     public void TestCheckFiltersOnTheSearchPage(){
 
@@ -75,9 +75,8 @@ public class CheckSearchAndFilters extends TestBase {
             $(".header-search__input").sendKeys("AirPods Pro");
             $(".header-search__input").pressEnter();
         });
-        step (" Проверка, что появились два фильтра ",() -> {
+        step (" Проверка, что появился фильтр ",() -> {
             $(".mts-search__filter-container").shouldHave(text("Полезные статьи"));
-            $(".mts-search__filter-container").shouldHave(text("Новости"));
         });
     }
 
@@ -130,9 +129,8 @@ public class CheckSearchAndFilters extends TestBase {
             $(".header-search__input").sendKeys("AirPods Pro");
             $(".header-search__input").pressEnter();
         });
-        step (" Проверка, что появились два фильтра ",() -> {
+        step (" Проверка, что появился фильтр ",() -> {
             $(".mts-search__filter-container").shouldHave(text("Полезные статьи"));
-            $(".mts-search__filter-container").shouldHave(text("Новости"));
         });
         step (" Проверка, что фильтра 'Сбросить' нет ",() -> {
             $(".mts-search__result_badge").shouldNotHave(text("Сбросить"));

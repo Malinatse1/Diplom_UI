@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde48782-8ca9-4abb-b323-a027f6922415" name="Changes" comment="Added allure">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="bde48782-8ca9-4abb-b323-a027f6922415" name="Changes" comment="Added README">
       <change afterPath="$PROJECT_DIR$/src/test/java/owner/config/WebDriverConfig.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/owner/config/WebDriverProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -296,7 +296,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674586650822</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Added README">
+      <created>1674658302631</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1674658302631</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -314,6 +321,7 @@
     <MESSAGE value="Add new code" />
     <MESSAGE value="Fix tests" />
     <MESSAGE value="Added allure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added allure" />
+    <MESSAGE value="Added README" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added README" />
   </component>
 </project>

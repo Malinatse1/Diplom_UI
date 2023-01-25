@@ -39,9 +39,9 @@ public class CheckSearchAndFilters extends TestBase {
         });
     }
     @Test
-    @DisplayName("Проверка поиска и переход по найденному результату")
+    @DisplayName("Проверка меню в хедере на странице поиска")
     @Tag("Позитивный кейс")
-    public void TestSearchAndApplyCheckOnEnterAndGoingToResult(){
+    public void TestCheckMenuInHeader(){
 
         SelenideLogger.addListener("allure", new AllureSelenide());
 
@@ -53,11 +53,9 @@ public class CheckSearchAndFilters extends TestBase {
             $(".header-search__input").sendKeys("AirPods Pro");
             $(".header-search__input").pressEnter();
         });
-        step ("Проверка, что в списке есть AirPods Pro",() -> {
-            $(".mts-search__results").shouldHave(text("AirPods Pro")).click();
-        });
-        step (" Проверка, что в статье есть AirPods Pro",() -> {
-            $(".section-box").shouldHave(text("На фоне перехода на удаленный формат работы продажи беспроводных наушников в России выросли в полтора раза"));
+        step("Проверка меню в хедере", () -> {
+            $(".main-menu").shouldHave(text("Комбо"), text("Связь"),
+                    text("Для дома"), text("Сервисы"), text("Финансы"), text("Интернет-магазин"));
         });
     }
     @Test

@@ -22,7 +22,7 @@ public class CheckSearchAndFilters extends TestBase {
     @Test
     @DisplayName("Проверка поиска и нажатие на 'Enter' ")
     @Tag("Позитивный кейс")
-    public void TestSearchAndApplyCheckOnEnter (){
+    public void Test1SearchAndApplyCheckOnEnter (){
 
         SelenideLogger.addListener("allure", new AllureSelenide());
 
@@ -41,7 +41,7 @@ public class CheckSearchAndFilters extends TestBase {
     @Test
     @DisplayName("Проверка меню в хедере на странице поиска")
     @Tag("Позитивный кейс")
-    public void TestCheckMenuInHeader(){
+    public void Test2CheckMenuInHeader(){
 
         SelenideLogger.addListener("allure", new AllureSelenide());
 
@@ -61,7 +61,7 @@ public class CheckSearchAndFilters extends TestBase {
     @Test
     @DisplayName("Проверка фильтра на странице поиска")
     @Tag("Позитивный кейс")
-    public void TestCheckFiltersOnTheSearchPage(){
+    public void Test3CheckFiltersOnTheSearchPage(){
 
         SelenideLogger.addListener("allure", new AllureSelenide());
 
@@ -81,7 +81,7 @@ public class CheckSearchAndFilters extends TestBase {
     @Test
     @DisplayName("Проверка фильтра 'Сбросить'")
     @Tag("Позитивный кейс")
-    public void TestCheckFilterReset(){
+    public void Test4CheckFilterReset(){
 
         SelenideLogger.addListener("allure", new AllureSelenide());
 
@@ -115,7 +115,7 @@ public class CheckSearchAndFilters extends TestBase {
     @Test
     @DisplayName("Проверка, что без выбранного одного из фильтра нет 'Сбросить'")
     @Tag("Позитивный кейс")
-    public void TestCheckFilterResetWithoutFilter(){
+    public void Test5CheckFilterResetWithoutFilter(){
 
         SelenideLogger.addListener("allure", new AllureSelenide());
 

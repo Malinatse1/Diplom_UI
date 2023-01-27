@@ -15,14 +15,10 @@ import static io.qameta.allure.Allure.step;
 
 
 public class CheckSearchAndFilters extends TestBase {
-    @BeforeEach
-    void addListener() {
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-    }
     @Test
     @DisplayName("Проверка поиска и нажатие на 'Enter' ")
     @Tag("Позитивный кейс")
-    public void Test1SearchAndApplyCheckOnEnter (){
+    public void test1SearchAndApplyCheckOnEnter (){
 
         SelenideLogger.addListener("allure", new AllureSelenide());
 
@@ -41,7 +37,7 @@ public class CheckSearchAndFilters extends TestBase {
     @Test
     @DisplayName("Проверка меню в хедере на странице поиска")
     @Tag("Позитивный кейс")
-    public void Test2CheckMenuInHeader(){
+    public void test2CheckMenuInHeader(){
 
         SelenideLogger.addListener("allure", new AllureSelenide());
 
@@ -61,7 +57,7 @@ public class CheckSearchAndFilters extends TestBase {
     @Test
     @DisplayName("Проверка фильтра на странице поиска")
     @Tag("Позитивный кейс")
-    public void Test3CheckFiltersOnTheSearchPage(){
+    public void test3CheckFiltersOnTheSearchPage(){
 
         SelenideLogger.addListener("allure", new AllureSelenide());
 
@@ -81,7 +77,7 @@ public class CheckSearchAndFilters extends TestBase {
     @Test
     @DisplayName("Проверка фильтра 'Сбросить'")
     @Tag("Позитивный кейс")
-    public void Test4CheckFilterReset(){
+    public void test4CheckFilterReset(){
 
         SelenideLogger.addListener("allure", new AllureSelenide());
 
@@ -115,7 +111,7 @@ public class CheckSearchAndFilters extends TestBase {
     @Test
     @DisplayName("Проверка, что без выбранного одного из фильтра нет 'Сбросить'")
     @Tag("Позитивный кейс")
-    public void Test5CheckFilterResetWithoutFilter(){
+    public void test5CheckFilterResetWithoutFilter(){
 
         SelenideLogger.addListener("allure", new AllureSelenide());
 
@@ -133,13 +129,5 @@ public class CheckSearchAndFilters extends TestBase {
         step (" Проверка, что фильтра 'Сбросить' нет ",() -> {
             $(".mts-search__result_badge").shouldNotHave(text("Сбросить"));
         });
-    }
-    @AfterEach
-    void AfterEach() {
-        Attach.screenshotAs("Last screenshot");
-        Attach.pageSource();
-        Attach.browserConsoleLogs();
-        Attach.addVideo();
-        Selenide.closeWebDriver();
     }
 }

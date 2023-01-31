@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde48782-8ca9-4abb-b323-a027f6922415" name="Changes" comment="Added fix README">
+    <list default="true" id="bde48782-8ca9-4abb-b323-a027f6922415" name="Changes" comment="Added fix remote url">
       <change afterPath="$PROJECT_DIR$/src/test/java/owner/config/WebDriverConfig.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/owner/config/WebDriverProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -395,7 +395,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675157021704</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Added fix remote url">
+      <created>1675190648257</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1675190648257</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Added fix remote url">
+      <created>1675191163133</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1675191163133</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -416,6 +430,7 @@
     <MESSAGE value="Added allure" />
     <MESSAGE value="Added README" />
     <MESSAGE value="Added fix README" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added fix README" />
+    <MESSAGE value="Added fix remote url" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added fix remote url" />
   </component>
 </project>

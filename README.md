@@ -4,16 +4,15 @@
 
 <p  align="center"
 
-<code><img width="5%" title="IntelliJ IDEA" src="readme_resources/IDEA.svg"></code>
+<code><img width="5%" title="IntelliJ IDEA" src="readme_resources/Idea.svg"></code>
 <code><img width="5%" title="Java" src="readme_resources/Java.svg"></code>
 <code><img width="5%" title="Selenoid" src="readme_resources/Selenoid.svg"></code>
 <code><img width="5%" title="Selenide" src="readme_resources/Selenide.svg"></code>
 <code><img width="5%" title="Gradle" src="readme_resources/Gradle.svg"></code>
-<code><img width="5%" title="Junit5" src="readme_resources/Junit5.svg"></code>
+<code><img width="5%" title="Junit5" src="readme_resources/JUnit5.svg"></code>
 <code><img width="5%" title="GitHub" src="readme_resources/GitHub.svg"></code>
 <code><img width="5%" title="Allure Report" src="readme_resources/Allure_Report.svg"></code>
 <code><img width="5%" title="Jenkins" src="readme_resources/Jenkins.svg"></code>
-<code><img width="5%" title="Jira" src="readme_resources/Java.svg"></code>
 <code><img width="5%" title="Telegram" src="readme_resources/Telegram.svg"></code>
 </p>
 
@@ -32,13 +31,13 @@
 ###  Локальный запуск тестов
 ```gradle clean test```
 ###   Удаленный запуск тестов
- ```gradle clean test
-    -Dbrowser=${BROWSER}
-    -DbrowserVersion=${BROWSER_VERSION}
-    -DbrowserSize=${BROWSER_SIZE}
-    -DremoteDriverUrl=https://user1:1234@${REMOTE_DRIVER_URL}/wd/hub/
-    -DvideoStorage=https://${REMOTE_DRIVER_URL}/video/
-    -Dthreads=${THREADS}/
+ ```
+  clean
+  ${TASK}
+-DremoteUrl=${REMOTE_URL}
+-DbrowserSize=${BROWSER_SIZE}
+-Dbrowser=${BROWSER}
+-DbrowserVersion=${BROWSER_VERSION}
 ```
 
 ###    Параметры сборки
@@ -73,6 +72,6 @@
 
 К каждому тесту в отчете прилагается видео. Одно из таких видео представлено ниже.
 <p align="center">
-  <img title="Selenoid Video" src="readme_resources/video.mp4">
+  <img title="Selenoid Video" src="readme_resources/video.gif">
 </p>
 

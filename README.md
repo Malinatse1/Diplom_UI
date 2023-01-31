@@ -1,5 +1,22 @@
 # Проект по автоматизации тестирования сайта МТС :abacus:
 
+## Стек используемых технологий
+
+<p  align="center"
+
+<code><img width="5%" title="IntelliJ IDEA" src="readme_resources/IDEA.svg"></code>
+<code><img width="5%" title="Java" src="readme_resources/Java.svg"></code>
+<code><img width="5%" title="Selenoid" src="readme_resources/Selenoid.svg"></code>
+<code><img width="5%" title="Selenide" src="readme_resources/Selenide.svg"></code>
+<code><img width="5%" title="Gradle" src="readme_resources/Gradle.svg"></code>
+<code><img width="5%" title="Junit5" src="readme_resources/Junit5.svg"></code>
+<code><img width="5%" title="GitHub" src="readme_resources/GitHub.svg"></code>
+<code><img width="5%" title="Allure Report" src="readme_resources/Allure_Report.svg"></code>
+<code><img width="5%" title="Jenkins" src="readme_resources/Jenkins.svg"></code>
+<code><img width="5%" title="Jira" src="readme_resources/Java.svg"></code>
+<code><img width="5%" title="Telegram" src="readme_resources/Telegram.svg"></code>
+</p>
+
 В данном проекте автотесты написаны на `Java` с использованием `Selenide` для UI-тестов.
 
 `Selenoid выполняет` запуск браузеров в контейнерах `Docker`.
@@ -35,23 +52,27 @@
 ##  Запуск тестов в Jenkins
 Для запуска сборки необходимо указать значения параметров и нажать кнопку ```Собрать```.
 
-![](/src/test/resources/2023-01-25_20-18-18.png)
+![](/readme_resources/Jenkins.png)
 
 
 ##  Отчет о результатах тестирования в Allure Report :bar_chart:
 ###  Основной Дашборд ###
 Для перехода к просмотру отчета в разделе "История сборок" нажать значок "Allure Report", откроется страница с отчетом по прохождению.
 
-![This is an image](/src/test/resources/2023-01-25_20-34-04.png)
+![This is an image](/readme_resources/Allure_result.png)
 
 ###  Группировка тестов по проверяемому функционалу ###
 
-![This is an image](/src/test/resources/2023-01-25_20-38-06.png)
+![This is an image](/readme_resources/Allure_steps.png)
 ##  Уведомления в Telegram с использованием бота
 
 После завершения сборки, Вам будет отправлено уведомление в ```Telegram``` с отчетом о прохождении.
 
-![This is an image](/src/test/resources/2023-01-25_20-42-42.png)
+![This is an image](/readme_resources/Telegram_bot.png)
 ##  Пример запуска теста в Selenoid :film_strip:
 
 К каждому тесту в отчете прилагается видео. Одно из таких видео представлено ниже.
+<p align="center">
+  <img title="Selenoid Video" src="readme_resources/video.mp4">
+</p>
+

@@ -20,10 +20,9 @@ public class CheckSearchAndFilters extends TestBase {
     @Tag("Позитивный кейс")
     public void test1SearchAndApplyCheckOnEnter (){
 
-        SelenideLogger.addListener("allure", new AllureSelenide());
 
         step ("Открыть страницу МТС",() ->
-        {open("https://www.mts.ru");
+        {open("");
         });
         step ("Ввести в поиск данные",() -> {
             $(".header-search__btn").click();
@@ -39,10 +38,8 @@ public class CheckSearchAndFilters extends TestBase {
     @Tag("Позитивный кейс")
     public void test2CheckMenuInHeader(){
 
-        SelenideLogger.addListener("allure", new AllureSelenide());
-
         step ("Открыть страницу МТС",() ->
-        {open("https://www.mts.ru");
+        {open("");
         });
         step ("Ввести в поиск данные",() -> {
             $(".header-search__btn").click();
@@ -59,10 +56,8 @@ public class CheckSearchAndFilters extends TestBase {
     @Tag("Позитивный кейс")
     public void test3CheckFiltersOnTheSearchPage(){
 
-        SelenideLogger.addListener("allure", new AllureSelenide());
-
         step ("Открыть страницу МТС",() ->
-        {open("https://www.mts.ru");
+        {open("");
         });
         step ("Ввести в поиск данные",() -> {
             $(".header-search__btn").click();
@@ -79,10 +74,8 @@ public class CheckSearchAndFilters extends TestBase {
     @Tag("Позитивный кейс")
     public void test4CheckFilterReset(){
 
-        SelenideLogger.addListener("allure", new AllureSelenide());
-
         step ("Открыть страницу МТС",() ->
-        {open("https://www.mts.ru");
+        {open("");
         });
         step ("Ввести в поиск данные",() -> {
             $(".header-search__btn").click();
@@ -113,10 +106,8 @@ public class CheckSearchAndFilters extends TestBase {
     @Tag("Позитивный кейс")
     public void test5CheckFilterResetWithoutFilter(){
 
-        SelenideLogger.addListener("allure", new AllureSelenide());
-
         step ("Открыть страницу МТС",() ->
-        {open("https://www.mts.ru");
+        {open("");
         });
         step ("Ввести в поиск данные",() -> {
             $(".header-search__btn").click();

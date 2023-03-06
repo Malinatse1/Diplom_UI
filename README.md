@@ -14,6 +14,8 @@
 <code><img width="5%" title="Allure Report" src="readme_resources/Allure_Report.svg"></code>
 <code><img width="5%" title="Jenkins" src="readme_resources/Jenkins.svg"></code>
 <code><img width="5%" title="Telegram" src="readme_resources/Telegram.svg"></code>
+
+<code><img width="5%" title="Allure_TO" src="readme_resources/Allure_TO.svg"></code>
 </p>
 
 В данном проекте автотесты написаны на `Java` с использованием `Selenide` для UI-тестов.
@@ -27,6 +29,7 @@
 В качестве библиотеки для модульного тестирования используется `JUnit 5.`
 
 `Jenkins` выполняет запуск тестов. После завершения прогона отправляются уведомления с помощью бота в `Telegram`.
+`Allure TestOps` - как система управления тестированием.
 ##  Запуск тестов из терминала :computer:
 ###  Локальный запуск тестов
 ```gradle clean test```
@@ -53,6 +56,9 @@
 
 ![](/readme_resources/Jenkins.png)
 
+После завершения сборки результаты тестирования доступны в:
+>- <code><strong>*Allure Report*</strong></code>
+>- <code><strong>*Allure TestOps*</strong></code> - результаты загружаются туда и тест-кейсы могут автоматически обновляться в соответствии с последними изменениями в коде.
 
 ##  Отчет о результатах тестирования в Allure Report :bar_chart:
 ###  Основной Дашборд ###
@@ -68,6 +74,22 @@
 После завершения сборки, Вам будет отправлено уведомление в ```Telegram``` с отчетом о прохождении.
 
 ![This is an image](/readme_resources/Telegram_bot.png)
+
+## <img width="4%" title="Allure TestOPS" src="readme_resources/Allure_TO.svg"> Интеграция с [Allure TestOps](https://allure.autotests.cloud/launch/18485)
+### Основной дашборд
+
+<p align="center">
+  <img src="readme_resources/Allure_TO_dashboard.png" alt="dashboard" width="900">
+</p>
+
+### Список тестов с результатами прогона
+
+<p align="center">
+  <img src="readme_resources/Allure_TO_results.png" alt="dashboard" width="900">
+</p>
+
+
+
 ##  Пример запуска теста в Selenoid :film_strip:
 
 К каждому тесту в отчете прилагается видео. Одно из таких видео представлено ниже.

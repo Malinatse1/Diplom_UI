@@ -63,7 +63,7 @@
 ###  Основной Дашборд ###
 Для перехода к просмотру отчета в разделе "История сборок" нажать значок "Allure Report", откроется страница с отчетом по прохождению.
 
-![This is an image](/readme_resources/Allure_result.png)
+![This is an image](/readme_resources/Allure_results.png)
 
 ###  Группировка тестов по проверяемому функционалу ###
 

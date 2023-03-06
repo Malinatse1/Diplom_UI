@@ -1,117 +1,72 @@
 package tests;
 
 import org.junit.jupiter.api.*;
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
-import static io.qameta.allure.Allure.step;
-
-
+import pages.MainPage;
+import pages.SearchProductPage;
 public class CheckSearchAndFilters extends TestBase {
+    MainPage mainPage = new MainPage();
+    SearchProductPage searchProductPage = new SearchProductPage();
     @Test
     @DisplayName("Проверка поиска и нажатие на 'Enter' ")
     @Tag("Позитивный кейс")
     public void test1SearchAndApplyCheckOnEnter (){
-
-
-        step ("Открыть страницу МТС",() ->
-        {open("");
-        });
-        step ("Ввести в поиск данные",() -> {
-            $(".header-search__btn").click();
-            $(".header-search__input").sendKeys("AirPods Pro");
-            $(".header-search__input").pressEnter();
-        });
-        step (" Проверка, что в списке есть AirPods Pro",() -> {
-            $(".mts-search__results").shouldHave(text("AirPods Pro"));
-        });
+        mainPage.searchProduct();
+        searchProductPage.checkListProduct();
     }
     @Test
-    @DisplayName("Проверка меню в хедере на странице поиска")
+    @DisplayName("Проверка фильтра Новости на странице поиска")
     @Tag("Позитивный кейс")
-    public void test2CheckMenuInHeader(){
-
-        step ("Открыть страницу МТС",() ->
-        {open("");
-        });
-        step ("Ввести в поиск данные",() -> {
-            $(".header-search__btn").click();
-            $(".header-search__input").sendKeys("AirPods Pro");
-            $(".header-search__input").pressEnter();
-        });
-        step("Проверка меню в хедере", () -> {
-            $(".main-menu").shouldHave(text("Комбо"), text("Связь"),
-                    text("Для дома"), text("Сервисы"), text("Финансы"), text("Интернет-магазин"));
-        });
+    public void test2CheckFilterNewsOnTheSearchPage() {
+        mainPage.searchProduct();
+        searchProductPage.checkFilterNews();
     }
     @Test
-    @DisplayName("Проверка фильтра на странице поиска")
+    @DisplayName("Проверка фильтра Полезные статьи на странице поиска")
     @Tag("Позитивный кейс")
-    public void test3CheckFiltersOnTheSearchPage(){
-
-        step ("Открыть страницу МТС",() ->
-        {open("");
-        });
-        step ("Ввести в поиск данные",() -> {
-            $(".header-search__btn").click();
-            $(".header-search__input").sendKeys("AirPods Pro");
-            $(".header-search__input").pressEnter();
-        });
-        step (" Проверка, что появился фильтр ",() -> {
-            $(".mts-search__filter-container").shouldHave(text("Полезные статьи"));
-        });
+    public void test3CheckFilterUsefulOnTheSearchPage(){
+        mainPage.searchProduct();
+        searchProductPage.checkFilterUsefulArticles();
     }
-
     @Test
-    @DisplayName("Проверка фильтра 'Сбросить'")
+    @DisplayName("Проверка фильтра 'Сбросить' с выбранным фильтром 'Полезные статьи'")
     @Tag("Позитивный кейс")
-    public void test4CheckFilterReset(){
-
-        step ("Открыть страницу МТС",() ->
-        {open("");
-        });
-        step ("Ввести в поиск данные",() -> {
-            $(".header-search__btn").click();
-            $(".header-search__input").sendKeys("AirPods Pro");
-            $(".header-search__input").pressEnter();
-        });
-        step (" Проверка, что появился фильтр 'Полезные статьи' ",() -> {
-            $(".mts-search__filter-container").shouldHave(text("Полезные статьи"));
-        });
-        step ("Нажать на фильтр 'Полезные статьи' ",() -> {
-            $(".choose-filter__item").shouldHave(text("Полезные статьи")).click();
-        });
-        step (" Проверка, что возле статей есть обозначение 'Полезные статьи' ",() -> {
-            $(".mts-search__result_badge").shouldHave(text("Полезные статьи"));
-        });
-        step (" Проверка, что появился фильтр 'Сбросить' ",() -> {
-            $(".mts-search__filter-container").shouldHave(text("Сбросить"));
-        });
-        step ("Нажать на фильтр 'Сбросить' ",() -> {
-            $(".mts-search__filter-container").shouldHave(text("Сбросить")).click();
-        });
-        step (" Проверка, что фильтра 'Сбросить' нет ",() -> {
-            $(".mts-search__result_badge").shouldNotHave(text("Сбросить"));
-        });
+    public void test4CheckClickFilterUsefulArticleAndReset(){
+        mainPage.searchProduct();
+        searchProductPage.checkFilterUsefulArticles();
+        searchProductPage.clickFilterUsefulArticles();
+        searchProductPage.checkDesignationUsefulArticles();
+        searchProductPage.checkFilterReset();
+        searchProductPage.clickFilterReset();
+        searchProductPage.checkNoFilterReset();
     }
     @Test
     @DisplayName("Проверка, что без выбранного одного из фильтра нет 'Сбросить'")
     @Tag("Позитивный кейс")
     public void test5CheckFilterResetWithoutFilter(){
-
-        step ("Открыть страницу МТС",() ->
-        {open("");
-        });
-        step ("Ввести в поиск данные",() -> {
-            $(".header-search__btn").click();
-            $(".header-search__input").sendKeys("AirPods Pro");
-            $(".header-search__input").pressEnter();
-        });
-        step (" Проверка, что появился фильтр ",() -> {
-            $(".mts-search__filter-container").shouldHave(text("Полезные статьи"));
-        });
-        step (" Проверка, что фильтра 'Сбросить' нет ",() -> {
-            $(".mts-search__result_badge").shouldNotHave(text("Сбросить"));
-        });
+        mainPage.searchProduct();
+        searchProductPage.checkFilterUsefulArticles();
+        searchProductPage.checkNoFilterReset();
+    }
+    @Test
+    @DisplayName("Проверка, что можно нажать на оба фильтра 'Новости' и 'Полезные статьи'")
+    @Tag("Позитивный кейс")
+    public void test6CheckClickBothFilters(){
+        mainPage.searchProduct();
+        searchProductPage.checkFilterUsefulArticles();
+        searchProductPage.clickFilterUsefulArticles();
+        searchProductPage.checkFilterNews();
+        searchProductPage.clickFilterNews();
+    }
+    @Test
+    @DisplayName("Проверка, что при двойном нажатии на фильтр 'Полезные статьи' пропадает фильтр 'Сбросить' ")
+    @Tag("Позитивный кейс")
+    public void test7CheckDoubleClickFilterAndReset() {
+       mainPage.searchProduct();
+       searchProductPage.checkFilterUsefulArticles();
+       searchProductPage.clickFilterUsefulArticles();
+       searchProductPage.checkDesignationUsefulArticles();
+       searchProductPage.checkFilterReset();
+       searchProductPage.clickFilterUsefulArticles();
+       searchProductPage.checkNoFilterReset();
     }
 }

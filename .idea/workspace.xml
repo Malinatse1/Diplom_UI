@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde48782-8ca9-4abb-b323-a027f6922415" name="Changes" comment="Added fix remote url">
-      <change afterPath="$PROJECT_DIR$/src/test/java/owner/config/WebDriverConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/owner/config/WebDriverProvider.java" afterDir="false" />
+    <list default="true" id="bde48782-8ca9-4abb-b323-a027f6922415" name="Changes" comment="Added page object">
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/MainPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/SearchProductPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/helpers/Attach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helpers/Attach.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/CheckSearchAndFilters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/CheckSearchAndFilters.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TestBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +96,7 @@
       <recent name="properties" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.CheckSearchAndFilters.test3CheckFiltersOnTheSearchPage">
+  <component name="RunManager" selected="Gradle.CheckSearchAndFilters.test7CheckClickFilterNewsAndReset">
     <configuration name="CheckSearchAndFilters" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -116,7 +120,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CheckSearchAndFilters.TestCheckFiltersOnTheSearchPage" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CheckSearchAndFilters.test3CheckFilterNewsOnTheSearchPage" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -129,7 +133,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;tests.CheckSearchAndFilters.TestCheckFiltersOnTheSearchPage&quot;" />
+            <option value="&quot;tests.CheckSearchAndFilters.test3CheckFilterNewsOnTheSearchPage&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -139,7 +143,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CheckSearchAndFilters.TestSearchAndApplyCheckOnEnterAndGoingToResult" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CheckSearchAndFilters.test7CheckClickBothFilters" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -152,7 +156,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;tests.CheckSearchAndFilters.TestSearchAndApplyCheckOnEnterAndGoingToResult&quot;" />
+            <option value="&quot;tests.CheckSearchAndFilters.test7CheckClickBothFilters&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -162,7 +166,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CheckSearchAndFilters.test3CheckFiltersOnTheSearchPage" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CheckSearchAndFilters.test7CheckClickBothFiltersAndReset" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -175,7 +179,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;tests.CheckSearchAndFilters.test3CheckFiltersOnTheSearchPage&quot;" />
+            <option value="&quot;tests.CheckSearchAndFilters.test7CheckClickBothFiltersAndReset&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -185,7 +189,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="RegistrationWithTestDataTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CheckSearchAndFilters.test7CheckClickFilterNewsAndReset" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -198,7 +202,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;tests.RegistrationWithTestDataTests&quot;" />
+            <option value="&quot;tests.CheckSearchAndFilters.test7CheckClickFilterNewsAndReset&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -210,11 +214,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.CheckSearchAndFilters.test3CheckFiltersOnTheSearchPage" />
-        <item itemvalue="Gradle.CheckSearchAndFilters.TestSearchAndApplyCheckOnEnterAndGoingToResult" />
-        <item itemvalue="Gradle.CheckSearchAndFilters.TestCheckFiltersOnTheSearchPage" />
+        <item itemvalue="Gradle.CheckSearchAndFilters.test7CheckClickFilterNewsAndReset" />
         <item itemvalue="Gradle.CheckSearchAndFilters" />
-        <item itemvalue="Gradle.RegistrationWithTestDataTests" />
+        <item itemvalue="Gradle.CheckSearchAndFilters.test7CheckClickBothFiltersAndReset" />
+        <item itemvalue="Gradle.CheckSearchAndFilters.test7CheckClickBothFilters" />
+        <item itemvalue="Gradle.CheckSearchAndFilters.test3CheckFilterNewsOnTheSearchPage" />
       </list>
     </recent_temporary>
   </component>
@@ -431,6 +435,7 @@
     <MESSAGE value="Added README" />
     <MESSAGE value="Added fix README" />
     <MESSAGE value="Added fix remote url" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added fix remote url" />
+    <MESSAGE value="Added page object" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added page object" />
   </component>
 </project>

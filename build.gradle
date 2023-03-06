@@ -48,18 +48,3 @@ tasks.withType(Test) {
         }
     }
 }
-
-
-
-help {
-    doFirst {
-        println ""
-        println "************************************************************************ "
-        println "***                                                                  *** "
-        println "*** Welcome to https://github.com/ahtung13/demoqa-test-16            *** "
-        println "*** ./gradle help                                                   *** "
-        println "***                                                                  *** "
-        println "************************************************************************ "
-        println ""
-    }
-}

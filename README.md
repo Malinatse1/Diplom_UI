@@ -2,7 +2,7 @@
 
 ## Стек используемых технологий
 
-<p  align="center"
+<p  align="left"
 
 <code><img width="5%" title="IntelliJ IDEA" src="readme_resources/Idea.svg"></code>
 <code><img width="5%" title="Java" src="readme_resources/Java.svg"></code>
@@ -14,7 +14,6 @@
 <code><img width="5%" title="Allure Report" src="readme_resources/Allure_Report.svg"></code>
 <code><img width="5%" title="Jenkins" src="readme_resources/Jenkins.svg"></code>
 <code><img width="5%" title="Telegram" src="readme_resources/Telegram.svg"></code>
-
 <code><img width="5%" title="Allure_TO" src="readme_resources/Allure_TO.svg"></code>
 </p>
 

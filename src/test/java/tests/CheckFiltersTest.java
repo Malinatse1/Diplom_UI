@@ -1,37 +1,32 @@
 package tests;
 
+import io.qameta.allure.Owner;
 import org.junit.jupiter.api.*;
 import pages.MainPage;
 import pages.SearchProductPage;
-public class CheckSearchAndFilters extends TestBase {
+
+@Tag("Позитивный кейс")
+@Owner("Bochkova N")
+public class CheckFiltersTest extends TestBase {
     MainPage mainPage = new MainPage();
     SearchProductPage searchProductPage = new SearchProductPage();
-    @Test
-    @DisplayName("Проверка поиска и нажатие на 'Enter' ")
-    @Tag("Позитивный кейс")
-    public void test1SearchAndApplyCheckOnEnter (){
-        mainPage.searchProduct();
-        searchProductPage.checkListProduct();
-    }
+
     @Test
     @DisplayName("Проверка фильтра Новости на странице поиска")
-    @Tag("Позитивный кейс")
-    public void test2CheckFilterNewsOnTheSearchPage() {
-        mainPage.searchProduct();
+    public void test1CheckFilterNewsOnTheSearchPage() {
+        mainPage.searchProduct("AirPods Pro");
         searchProductPage.checkFilterNews();
     }
     @Test
     @DisplayName("Проверка фильтра Полезные статьи на странице поиска")
-    @Tag("Позитивный кейс")
-    public void test3CheckFilterUsefulOnTheSearchPage(){
-        mainPage.searchProduct();
+    public void test2CheckFilterUsefulOnTheSearchPage(){
+        mainPage.searchProduct("AirPods Pro");
         searchProductPage.checkFilterUsefulArticles();
     }
     @Test
     @DisplayName("Проверка фильтра 'Сбросить' с выбранным фильтром 'Полезные статьи'")
-    @Tag("Позитивный кейс")
-    public void test4CheckClickFilterUsefulArticleAndReset(){
-        mainPage.searchProduct();
+    public void test3CheckClickFilterUsefulArticleAndReset(){
+        mainPage.searchProduct("AirPods Pro");
         searchProductPage.checkFilterUsefulArticles();
         searchProductPage.clickFilterUsefulArticles();
         searchProductPage.checkDesignationUsefulArticles();
@@ -41,17 +36,15 @@ public class CheckSearchAndFilters extends TestBase {
     }
     @Test
     @DisplayName("Проверка, что без выбранного одного из фильтра нет 'Сбросить'")
-    @Tag("Позитивный кейс")
-    public void test5CheckFilterResetWithoutFilter(){
-        mainPage.searchProduct();
+    public void test4CheckFilterResetWithoutFilter(){
+        mainPage.searchProduct("AirPods Pro");
         searchProductPage.checkFilterUsefulArticles();
         searchProductPage.checkNoFilterReset();
     }
     @Test
     @DisplayName("Проверка, что можно нажать на оба фильтра 'Новости' и 'Полезные статьи'")
-    @Tag("Позитивный кейс")
-    public void test6CheckClickBothFilters(){
-        mainPage.searchProduct();
+    public void test5CheckClickBothFilters(){
+        mainPage.searchProduct("AirPods Pro");
         searchProductPage.checkFilterUsefulArticles();
         searchProductPage.clickFilterUsefulArticles();
         searchProductPage.checkFilterNews();
@@ -59,9 +52,8 @@ public class CheckSearchAndFilters extends TestBase {
     }
     @Test
     @DisplayName("Проверка, что при двойном нажатии на фильтр 'Полезные статьи' пропадает фильтр 'Сбросить' ")
-    @Tag("Позитивный кейс")
-    public void test7CheckDoubleClickFilterAndReset() {
-       mainPage.searchProduct();
+    public void test6CheckDoubleClickFilterAndReset() {
+       mainPage.searchProduct("AirPods Pro");
        searchProductPage.checkFilterUsefulArticles();
        searchProductPage.clickFilterUsefulArticles();
        searchProductPage.checkDesignationUsefulArticles();

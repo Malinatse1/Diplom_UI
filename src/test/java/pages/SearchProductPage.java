@@ -4,22 +4,14 @@ import io.qameta.allure.Step;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static io.qameta.allure.Allure.step;
+
 public class SearchProductPage {
-    public final String product = "AirPods Pro";
     public final String filterUsefulArticles = "Полезные статьи";
     public final String filterReset = "Сбросить";
     public final String filterNews = "Новости";
 
     @Step(" Проверка, что в списке есть искомый продукт")
-    public SearchProductPage checkListProduct(){
-        $(".header-search__btn").click();
-        $(".header-search__input").setValue(product);
-        $(".header-search__input").pressEnter();
-        return null;
-    }
-
-    @Step("Проверка меню в хедере")
-    public SearchProductPage checkMenuHeader(){
+    public SearchProductPage checkListProduct(String product) {
         $(".header-search__btn").click();
         $(".header-search__input").setValue(product);
         $(".header-search__input").pressEnter();

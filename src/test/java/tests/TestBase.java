@@ -11,6 +11,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import static com.codeborne.selenide.Selenide.open;
+
 public class TestBase {
     @BeforeAll
     static void beforeAll() {
@@ -29,10 +30,8 @@ public class TestBase {
     @BeforeEach
     @Step("Открыть страницу МТС")
     public void openPage() {
-        open("");
-    }
-    void addListener() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+        open("");
     }
 
     @AfterEach
